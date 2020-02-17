@@ -1,3 +1,3 @@
-release: python olimpicos/manage.py makemigrations tokio
-release: python olimpicos/manage.py migrate tokio
-web: gunicorn --chdir olimpicos olimpicos.wsgi — log-file -
+release: python manage.py makemigrations tokio
+release: python manage.py migrate tokio
+web: gunicorn olimpicos.wsgi — log-file -
